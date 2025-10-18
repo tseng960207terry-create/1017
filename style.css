@@ -168,26 +168,18 @@ label {
 .gallery img:hover {
   transform: scale(1.05);                    /* 放大 5% */
 }
-<img src="me.png" alt="我的照片" width="250" style="border-radius: 50%;">
 .avatar {
   width: 250px;              /* 頭貼大小 */
   height: 250px;             /* 設定高度，確保為正方形 */
-  border-radius: 50%;        /* 四角圓弧成圓形 */
+  border-radius: 50%!important;        /* 四角圓弧成圓形 */
+  overflow: hidden; 
   object-fit: cover;         /* 圖片填滿容器，不變形 */
   display: block;            /* 讓圖片可以置中 */
   margin: 0 auto;            /* 水平置中 */
   box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* 加一點陰影讓頭貼更立體 */
+  transition: transform 0.2s ease;
 }
-.avatar {
-  width: 250px;              /* 頭貼大小 */
-  height: 250px;             /* 設定高度，確保為正方形 */
-  border-radius: 50%;        /* 四角圓弧成圓形 */
-  object-fit: cover;         /* 圖片填滿容器，不變形 */
-  display: block;            /* 讓圖片可以置中 */
-  margin: 0 auto;            /* 水平置中 */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* 加一點陰影讓頭貼更立體 */
-  transition: transform 0.2s ease; /* 加上動畫過渡 */
-}
+
 
 .avatar:hover {
   transform: scale(1.05);    /* 滑鼠移上去放大 */
